@@ -15,6 +15,7 @@ export default {
   },
   actions: {
     async getToken ({ commit }) {
+      commit('loading/SET_LOADING', true, { root: true })
       try {
         const { data } = await oauth.getToken()
         commit('SET_ACCESS_TOKEN', data.access_token)
@@ -22,7 +23,7 @@ export default {
         commit('SET_ACCESS_TOKEN', null)
         console.error('Error OAuth: ', error)
       } finally {
-        console.log('Done!')
+        commit('loading/SET_LOADING', false, { root: true })
       }
     }
   }
