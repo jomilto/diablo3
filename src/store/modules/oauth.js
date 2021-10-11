@@ -16,7 +16,7 @@ export default {
   actions: {
     async getToken ({ commit }) {
       try {
-        const data = await oauth.getToken()
+        const { data } = await oauth.getToken()
         commit('SET_ACCESS_TOKEN', data.access_token)
       } catch (error) {
         commit('SET_ACCESS_TOKEN', null)
