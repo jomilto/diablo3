@@ -13,7 +13,6 @@
         "axios": "^0.22.0",
         "bootstrap-vue": "^2.21.2",
         "core-js": "^3.6.5",
-        "dotenv": "^10.0.0",
         "numeral": "^2.0.6",
         "vue": "^2.6.11",
         "vue-router": "^3.2.0",
@@ -54,17 +53,15 @@
             "parser": "babel-eslint"
         },
         "rules": {},
-        "overrides": [
-            {
-                "files": [
-                    "**/__tests__/*.{j,t}s?(x)",
-                    "**/tests/unit/**/*.spec.{j,t}s?(x)"
-                ],
-                "env": {
-                    "jest": true
-                }
+        "overrides": [{
+            "files": [
+                "**/__tests__/*.{j,t}s?(x)",
+                "**/tests/unit/**/*.spec.{j,t}s?(x)"
+            ],
+            "env": {
+                "jest": true
             }
-        ]
+        }]
     },
     "browserslist": [
         "> 1%",
