@@ -10,6 +10,8 @@ import store from './store'
 // Traer el css global
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+// CSS global
+import './assets/css/main.styl'
 
 // configuración extra
 Vue.use(BootstrapVue)
